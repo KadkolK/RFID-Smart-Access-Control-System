@@ -1,0 +1,101 @@
+# RFID Smart Access Control System Using Arduino UNO + Python GUI
+
+## 1. Project Overview
+This project is an embedded smart access control system integrating hardware and software components. 
+It uses RFID authentication with Arduino UNO and MFRC522 module, combined with a Python-based desktop dashboard 
+for real-time monitoring, database logging, and automated reporting.
+
+The system is designed to demonstrate a low-cost security and access management solution suitable for doors, 
+lockers, and restricted entry systems.
+
+## 2. System Architecture
+### Hardware Layer
+- Arduino UNO
+- MFRC522 RFID Reader
+- Servo Motor (Door Lock Simulation)
+- Buzzer (Alert System)
+- RFID Tags
+
+### Communication Layer
+- Serial Communication (USB)
+- SPI Protocol (RFID ↔ Arduino)
+
+### Software Layer
+- Python Tkinter GUI Dashboard
+- MySQL Database Logging
+- Matplotlib Live Graphs
+- ReportLab PDF Report Generator
+
+## 3. Working Principle
+1. RFID tag is scanned near the reader
+2. MFRC522 reads UID of the tag
+3. Arduino compares UID with stored authorized UID
+4. Arduino sends result via Serial:
+   - UID
+   - GRANTED / DENIED
+5. Python application:
+   - Reads serial data
+   - Updates GUI dashboard
+   - Logs data into MySQL
+   - Updates live statistics graph
+   - Generates PDF report
+
+## 4. Hardware Design
+### RFID Module (MFRC522 - SPI Interface)
+- SDA → D10
+- SCK → D13
+- MOSI → D11
+- MISO → D12
+- RST → D9
+- VCC → 3.3V
+- GND → GND
+
+### Servo Motor
+- Signal → D7
+- VCC → 5V
+- GND → GND
+
+### Buzzer
+- Positive → D8
+- Negative → GND
+
+## 5. Software Design
+### Python Modules Used
+- tkinter → GUI interface
+- pyserial → Arduino communication
+- mysql.connector → database logging
+- matplotlib → live graph visualization
+- reportlab → PDF report generation
+- json, os, datetime → configuration and system handling
+
+## 6. Database Structure
+Table: access_logs
+| Field     | Type        |
+|-----------|-------------|
+| id        | INT (AUTO)  |
+| uid       | VARCHAR     |
+| status    | VARCHAR     |
+| timestamp | DATETIME    |
+
+## 7. Key Features
+- RFID-based authentication
+- Real-time access dashboard
+- Live statistics (Granted vs Denied)
+- MySQL logging system
+- Automated PDF security report generation
+- Serial communication between hardware & software
+
+## 8. System Flow Diagram
+RFID Scan → Arduino Processing → Serial Output → Python GUI → Database Logging → Graph Update → PDF Report
+
+## 9. Future Improvements
+
+- Cloud database integration
+- IoT-based remote monitoring
+- Mobile application control
+- Multi-user authentication system
+- Facial recognition integration
+
+## 10. Conclusion
+This project demonstrates an efficient embedded access control system combining hardware and software integration. 
+It provides real-time monitoring, secure authentication, and scalable design for future IoT-based expansion.
