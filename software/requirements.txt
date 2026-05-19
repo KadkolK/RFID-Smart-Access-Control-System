@@ -1,0 +1,7 @@
+tk
+pyserial
+mysql-connector-python
+matplotlib
+reportlab
+Pillow
+numpy
