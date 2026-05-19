@@ -16,4 +16,4 @@ Uses SPI protocol between Arduino and RFID module.
 
 Serial communication sends results to Python application.
 
-# NOTE: The Fritzing diagram shows a connection error due to a possible corrupted file imported during project development.
+### NOTE: The Fritzing diagram shows a connection error due to a possible corrupted file imported during project development.
