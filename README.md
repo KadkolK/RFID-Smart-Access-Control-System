@@ -1,34 +1,37 @@
 # RFID Smart Access Control System
 
 ## Overview
-Embedded RFID-based access control system using Arduino UNO + Python GUI dashboard.
+This project is an embedded RFID-based access control system using Arduino UNO integrated with a Python GUI dashboard for real-time monitoring and control.
 
 ## Features
-- RFID authentication
-- Servo-based lock simulation
-- Buzzer alert system
+- RFID-based authentication system
+- Servo motor-based lock simulation
+- Buzzer alert for unauthorized access
 - Real-time GUI dashboard
-- MySQL logging system
+- MySQL database logging
 - PDF report generation
 
 ## Tech Stack
-- Arduino C++
+- Arduino UNO (C++)
 - Python (Tkinter)
-- MySQL
-- Serial Communication
+- MySQL Database
+- Serial Communication (USB)
 - Matplotlib
 - ReportLab
 
-## Structure
-hardware/ → Arduino code + circuit  
-software/ → Python application  
-database/ → SQL schema  
-docs/ → project documentation  
-assets/ → demo video + screenshots  
+## Project Structure
+- hardware/ → Arduino code and circuit design
+- software/ → Python application
+- database/ → SQL schema
+- docs/ → project documentation
+- assets/ → demo video and screenshots
 
 ## Demo
-(In the Assets)
+Available in the `assets/` folder (video + screenshots)
 
 ## Authors
-- Keya Kadkol
-- Shreya Kamble
+- **Keya Kadkol** – Developed Arduino firmware, Python GUI application, database integration, system integration, and documentation.
+
+- **Shreya Kamble** – Designed circuit connections and PCB layout, assisted in hardware testing.
+
+- **Sanskruti Jadhav** – Contributed to coordination and basic project support.
