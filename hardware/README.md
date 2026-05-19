@@ -15,3 +15,5 @@ The hardware system reads RFID tags using MFRC522, validates UID, and triggers:
 Uses SPI protocol between Arduino and RFID module.
 
 Serial communication sends results to Python application.
+
+# NOTE: The Fritzing diagram shows a connection error due to a possible corrupted file imported during project development.
